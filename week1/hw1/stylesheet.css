@@ -44,56 +44,8 @@ header {
   grid-row: 3 / 5;
 }
 
-.food {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  gap: 20px;
-  padding: 50px;
-  background-color: #e9edc9;
-}
-
-.food img {
-  width: 200px;
-  /* height: 100%; */
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.food div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
-  background-color: #fefae0;
-}
-
-.view {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  gap: 20px;
-  padding: 50px;
-  background-color: #e9edc9;
-}
-
-.view img {
-  width: 200px;
-  /* height: 100%; */
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.view div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
-  background-color: #fefae0;
-}
-
+.food,
+.view,
 .selfie {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -103,13 +55,17 @@ header {
   background-color: #e9edc9;
 }
 
+.food img,
+.view img,
 .selfie img {
-  width: 200px;
-  /* height: 100%; */
+  width: 100%;
+  max-width: 200px;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
+.food div,
+.view div,
 .selfie div {
   display: flex;
   flex-direction: column;
@@ -117,4 +73,40 @@ header {
   gap: 10px;
   padding: 20px;
   background-color: #fefae0;
+  width: 100%;
+  max-width: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+  .food,
+  .view,
+  .selfie {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .food,
+  .view,
+  .selfie {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .food,
+  .view,
+  .selfie {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .food,
+  .view,
+  .selfie {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 }
