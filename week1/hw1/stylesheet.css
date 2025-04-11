@@ -165,6 +165,14 @@ main {
   background-color: #fefae0;
   width: 100%;
   max-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.food div:hover,
+.view div:hover,
+.selfie div:hover {
+  transform: scale(1.03);
+  background-color: #ccd5ae
 }
 
 .food img,
@@ -210,11 +218,20 @@ main {
   }
 }
 
+.fa-heart {
+  transition: color 0.1s ease;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+  color: red;
+}
+
 footer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   height: 10rem;
   padding: 3rem 3rem 3rem 5rem;
-  background-color: rgb(231, 228, 228);
+  background-color: #e7e4e4;
 }
