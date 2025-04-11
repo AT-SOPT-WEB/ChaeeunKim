@@ -40,24 +40,24 @@ nav div {
   border-radius: 10px;
 }
 
-nav p {
+nav a {
   padding: 0.8rem 1rem;
   text-align: center;
   cursor: pointer;
   border-radius: 0;
 }
 
-nav p:hover {
+nav a:hover {
   background-color: #f4a261;
   color: white;
 }
 
-nav p:first-child:hover {
+nav a:first-child:hover {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
-nav p:last-child:hover {
+nav a:last-child:hover {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
