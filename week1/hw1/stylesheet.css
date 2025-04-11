@@ -3,8 +3,9 @@ header {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  padding: 20px;
+  padding: 1.3rem;
   background-color: #ccd5ae;
+  z-index: 1;
 }
 
 .content {
@@ -45,6 +46,7 @@ nav a {
   text-align: center;
   cursor: pointer;
   border-radius: 0;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -77,24 +79,25 @@ nav a:visited{
 main {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 2rem;
   padding-top: 5rem;
   padding-bottom: 2rem;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(4, 8rem);
+  padding: 3rem;
+  gap: 1rem;
+  background-color: #e9edc9;
 }
 
 .home img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.home {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(4, 150px);
-  padding: 50px;
-  gap: 10px;
-  background-color: #e9edc9;
 }
 
 .home img:first-child {
@@ -149,28 +152,28 @@ main {
 .view,
 .selfie {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   gap: 1rem;
+  justify-items: center;
 }
 
-.food div,
-.view div,
-.selfie div {
+
+.food article,
+.view article,
+.selfie article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 20px;
+  gap: 0.5rem;
+  padding: 1.3rem;
   background-color: #fefae0;
-  width: 100%;
-  max-width: 200px;
+  width: 13rem;
   transition: transform 0.3s ease;
 }
 
-.food div:hover,
-.view div:hover,
-.selfie div:hover {
+.food article:hover,
+.view article:hover,
+.selfie article:hover {
   transform: scale(1.03);
   background-color: #ccd5ae
 }
@@ -179,43 +182,8 @@ main {
 .view img,
 .selfie img {
   width: 100%;
-  max-width: 200px;
   object-fit: cover;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 1200px) {
-  .food,
-  .view,
-  .selfie {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .food,
-  .view,
-  .selfie {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .food,
-  .view,
-  .selfie {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 30px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .food,
-  .view,
-  .selfie {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
+  margin-bottom: 1rem;
 }
 
 .fa-heart {
@@ -225,6 +193,38 @@ main {
 
 .fa-heart:hover {
   color: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.infinite-banner {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.infinite-banner-list {
+  display: flex;
+  animation: infinite-banner-scroll 10s linear infinite;
+}
+
+@keyframes infinite-banner-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+li img {
+  width: 12rem;
+  height: 12rem;
+  margin: 0rem 0.5rem;
+  object-fit: cover;
 }
 
 footer {
