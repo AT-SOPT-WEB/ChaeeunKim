@@ -1,11 +1,23 @@
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
   width: 100%;
   padding: 1.3rem;
   background-color: #ccd5ae;
   z-index: 1;
+}
+
+header span {
+  text-align: left;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header i {
+  text-align: right;
 }
 
 .content {
@@ -72,7 +84,7 @@ nav a {
   }
 }
 
-nav a:visited{
+nav a:visited {
   color: black;
 }
 
@@ -157,7 +169,6 @@ main {
   justify-items: center;
 }
 
-
 .food article,
 .view article,
 .selfie article {
@@ -175,7 +186,7 @@ main {
 .view article:hover,
 .selfie article:hover {
   transform: scale(1.03);
-  background-color: #ccd5ae
+  background-color: #ccd5ae;
 }
 
 .food img,
