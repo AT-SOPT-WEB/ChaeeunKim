@@ -59,6 +59,7 @@ nav a {
   cursor: pointer;
   border-radius: 0;
   text-decoration: none;
+  color: black
 }
 
 nav a:hover {
@@ -74,18 +75,6 @@ nav a:first-child:hover {
 nav a:last-child:hover {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-}
-
-nav a {
-  text-decoration: none;
-
-  a:link {
-    color: gray;
-  }
-}
-
-nav a:visited {
-  color: black;
 }
 
 main {
