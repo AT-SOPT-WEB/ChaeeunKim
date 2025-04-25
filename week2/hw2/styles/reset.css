@@ -145,9 +145,10 @@ body {
 :root {
   --black: #17171a;
   --lightgray: #f4f4f4;
+  --green: #67ae6e;
   --white: #fff;
 }
 
 body {
-  background-color: var(--lightgray);
+  padding: 0 20rem;
 }

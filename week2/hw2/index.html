@@ -4,8 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
+    <script
+      src="https://kit.fontawesome.com/1a262862d7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <button type="button">전체</button>
+      <button type="button">완료됨</button>
+      <button type="button">미완료</button>
+      <button type="menu">
+        중요도
+        <i class="fa-solid fa-caret-down"></i>
+      </button>
+    </header>
+
+    <main>
+      <div class="upper">
+        <section class="addSection">
+          <input type="text" placeholder="할 일을 입력하세요." />
+          <select name="priority" id="priority" size="1">
+            <option value="none" selected>중요도 선택</option>
+            <option value="first">1</option>
+            <option value="second">2</option>
+            <option value="third">3</option>
+          </select>
+          <button type="submit">추가</button>
+        </section>
+
+        <section class="editSection">
+          <button type="button">삭제</button>
+          <button type="button">완료</button>
+        </section>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox" /></th>
+            <th>중요도</th>
+            <th>완료됨</th>
+            <th>할 일</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </body>
 </html>
