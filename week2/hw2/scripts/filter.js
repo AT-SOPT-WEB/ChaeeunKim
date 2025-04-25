@@ -1,0 +1,26 @@
+import { renderTodos } from "./renderTodos.js";
+
+const getTodosData = () => JSON.parse(localStorage.getItem("todosData"));
+
+export const filterButtons = () => {
+  const allButton = document.querySelector(".all-button");
+  const completedButton = document.querySelector(".completed-button");
+  const incompletedButton = document.querySelector(".incompleted-button");
+
+  // "전체" 버튼
+  allButton.addEventListener("click", () => {
+    renderTodos(getTodosData());
+  });
+
+  // "완료됨" 버튼
+  completedButton.addEventListener("click", () => {
+    const todos = getTodosData().filter((todo) => todo.completed);
+    renderTodos(todos);
+  });
+
+  // "미완료" 버튼
+  incompletedButton.addEventListener("click", () => {
+    const todos = getTodosData().filter((todo) => !todo.completed);
+    renderTodos(todos);
+  });
+};
