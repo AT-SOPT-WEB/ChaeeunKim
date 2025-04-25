@@ -1,6 +1,7 @@
 import { todos } from "../constants/todos.js";
 import { renderTodos } from "./renderTodos.js";
 import { filterButtons } from "./filter.js";
+import { addTodos } from "./addTodos.js";
 
 // todosData 저장 및 초기화
 if (!localStorage.getItem("todosData")) {
@@ -14,3 +15,5 @@ renderTodos(todosData);
 // 필터링 버튼 이벤트
 filterButtons();
 
+// 할 일 추가
+addTodos();
