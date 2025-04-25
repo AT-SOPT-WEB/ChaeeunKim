@@ -2,6 +2,7 @@ import { todos } from "../constants/todos.js";
 import { renderTodos } from "./renderTodos.js";
 import { filterButtons } from "./filter.js";
 import { addTodos } from "./addTodos.js";
+import { checkboxToggle } from "./checkboxToggle.js";
 
 // todosData 저장 및 초기화
 if (!localStorage.getItem("todosData")) {
@@ -17,3 +18,6 @@ filterButtons();
 
 // 할 일 추가
 addTodos();
+
+// 체크박스 선택
+checkboxToggle();
