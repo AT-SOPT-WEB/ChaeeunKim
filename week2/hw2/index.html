@@ -10,6 +10,7 @@
     ></script>
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
   </head>
   <body>
     <header>
@@ -44,7 +45,7 @@
 
         <section class="editSection">
           <button type="button" class="delete-button">삭제</button>
-          <button type="button">완료</button>
+          <button type="button" class="complete-button">완료</button>
         </section>
       </div>
 
@@ -60,6 +61,13 @@
         <tbody></tbody>
       </table>
     </main>
+
+    <div class="modal-overlay hidden">
+      <div class="modal">
+        <p>이미 완료된 todo가 포함되어 있습니다.</p>
+        <button type="button" class="modal-close-button">닫기</button>
+      </div>
+    </div>
     <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>

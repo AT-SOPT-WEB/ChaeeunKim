@@ -4,6 +4,8 @@ import { filterButtons } from "./filter.js";
 import { addTodos } from "./addTodos.js";
 import { checkboxToggle } from "./checkboxToggle.js";
 import { deleteTodos } from "./deleteTodos.js";
+import { setupModal } from "./modal.js";
+import { completeTodos } from "./completeTodos.js";
 
 // todosData 저장 및 초기화
 if (!localStorage.getItem("todosData")) {
@@ -25,3 +27,9 @@ checkboxToggle();
 
 // 삭제 버튼 이벤트
 deleteTodos();
+
+// 완료 버튼 이벤트
+completeTodos();
+
+// 모달
+setupModal();
