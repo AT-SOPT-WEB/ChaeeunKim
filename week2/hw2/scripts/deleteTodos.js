@@ -1,13 +1,8 @@
 import { renderTodos } from "./renderTodos.js";
+import { getTodosData, saveTodosData } from "./utils/todoStorage.js";
 
 export const deleteTodos = () => {
   const deleteButton = document.querySelector(".delete-button");
-
-  const getTodosData = () => JSON.parse(localStorage.getItem("todosData"));
-
-  const saveTodosData = (data) => {
-    localStorage.setItem("todosData", JSON.stringify(data));
-  };
 
   deleteButton.addEventListener("click", () => {
     const checkedItems = document.querySelectorAll(".check-item:checked");

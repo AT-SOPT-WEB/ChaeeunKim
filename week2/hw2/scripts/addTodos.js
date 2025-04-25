@@ -1,15 +1,10 @@
 import { renderTodos } from "./renderTodos.js";
+import { getTodosData, saveTodosData } from "./utils/todoStorage.js";
 
 export const addTodos = () => {
   const input = document.querySelector(".addSection input");
   const priority = document.querySelector("#priority");
   const addButton = document.querySelector(".submitButton");
-
-  const getTodosData = () => JSON.parse(localStorage.getItem("todosData"));
-
-  const saveTodosData = (data) => {
-    localStorage.setItem("todosData", JSON.stringify(data));
-  };
 
   const priorityList = {
     first: 1,

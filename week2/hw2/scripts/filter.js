@@ -1,4 +1,5 @@
 import { renderTodos } from "./renderTodos.js";
+import { getTodosData } from "./utils/todoStorage.js";
 
 export const filterButtons = () => {
   const allButton = document.querySelector(".all-button");
@@ -7,8 +8,6 @@ export const filterButtons = () => {
   const dropdown = document.querySelector(".dropdown");
   const priorityButton = document.querySelector(".priority-button");
   const priorityItems = document.querySelectorAll(".dropdown-menu li");
-
-  const getTodosData = () => JSON.parse(localStorage.getItem("todosData"));
 
   // "전체" 버튼
   allButton.addEventListener("click", () => {
