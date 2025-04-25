@@ -63,14 +63,14 @@ main {
   gap: 1rem;
 }
 
-.addSection {
+.add-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.addSection input {
+.add-section input {
   width: 55rem;
   height: 3rem;
   padding: 1rem;
@@ -78,7 +78,7 @@ main {
   border-radius: 5px;
 }
 
-.addSection select {
+.add-section select {
   width: 11rem;
   height: 3rem;
   padding: 0.5rem 1rem;
@@ -86,7 +86,7 @@ main {
   border-radius: 5px;
 }
 
-.editSection {
+.edit-section {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;

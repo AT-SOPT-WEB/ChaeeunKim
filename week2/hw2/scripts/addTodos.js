@@ -2,9 +2,9 @@ import { renderTodos } from "./renderTodos.js";
 import { getTodosData, saveTodosData } from "./utils/todoStorage.js";
 
 export const addTodos = () => {
-  const input = document.querySelector(".addSection input");
+  const input = document.querySelector(".add-section input");
   const priority = document.querySelector("#priority");
-  const addButton = document.querySelector(".submitButton");
+  const addButton = document.querySelector(".submit-button");
 
   const priorityList = {
     first: 1,
