@@ -150,5 +150,6 @@ body {
 }
 
 body {
-  padding: 0 20rem;
+  width: 75rem;
+  margin: 0 auto;
 }
