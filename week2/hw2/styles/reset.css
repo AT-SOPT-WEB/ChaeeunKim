@@ -141,3 +141,13 @@ body {
   width: 100%;
   scroll-behavior: smooth;
 }
+
+:root {
+  --black: #17171a;
+  --lightgray: #f4f4f4;
+  --white: #fff;
+}
+
+body {
+  background-color: var(--lightgray);
+}
