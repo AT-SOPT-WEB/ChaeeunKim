@@ -6,6 +6,8 @@ export const filterButtons = () => {
   const allButton = document.querySelector(".all-button");
   const completedButton = document.querySelector(".completed-button");
   const incompletedButton = document.querySelector(".incompleted-button");
+  const dropdown = document.querySelector(".dropdown");
+  const priorityButton = document.querySelector(".priority-button");
 
   // "전체" 버튼
   allButton.addEventListener("click", () => {
@@ -22,5 +24,10 @@ export const filterButtons = () => {
   incompletedButton.addEventListener("click", () => {
     const todos = getTodosData().filter((todo) => !todo.completed);
     renderTodos(todos);
+  });
+
+  // "중요도" 버튼
+  priorityButton.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
   });
 };
