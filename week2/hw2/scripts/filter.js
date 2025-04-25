@@ -1,13 +1,14 @@
 import { renderTodos } from "./renderTodos.js";
 
-const getTodosData = () => JSON.parse(localStorage.getItem("todosData"));
-
 export const filterButtons = () => {
   const allButton = document.querySelector(".all-button");
   const completedButton = document.querySelector(".completed-button");
   const incompletedButton = document.querySelector(".incompleted-button");
   const dropdown = document.querySelector(".dropdown");
   const priorityButton = document.querySelector(".priority-button");
+  const priorityItems = document.querySelectorAll(".dropdown-menu li");
+
+  const getTodosData = () => JSON.parse(localStorage.getItem("todosData"));
 
   // "전체" 버튼
   allButton.addEventListener("click", () => {
@@ -29,5 +30,17 @@ export const filterButtons = () => {
   // "중요도" 버튼
   priorityButton.addEventListener("click", () => {
     dropdown.classList.toggle("open");
+  });
+
+  priorityItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      const selectedPriority = Number(e.target.textContent);
+      const todos = getTodosData().filter(
+        (todo) => todo.priority === selectedPriority
+      );
+      renderTodos(todos);
+
+      dropdown.classList.remove("open"); // 드롭다운 닫기
+    });
   });
 };
