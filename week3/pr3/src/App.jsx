@@ -1,14 +1,23 @@
 import Card from "./components/Card";
 import Header from "./components/Header";
-
+import Search from "./components/Search";
+import useSearch from "./hooks/useSearch";
 import { members } from "./constants/members";
 
 function App() {
+  const { search, filteredMembers, handleSearchChange, handleSearch } =
+    useSearch(members);
+
   return (
     <>
       <Header />
+      <Search
+        search={search}
+        handleSearchChange={handleSearchChange}
+        handleSearch={handleSearch}
+      />
       <section style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-        {members.map((member) => (
+        {filteredMembers.map((member) => (
           <Card
             key={member.id}
             name={member.name}
