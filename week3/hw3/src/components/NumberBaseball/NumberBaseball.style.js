@@ -7,16 +7,16 @@ export const numballStyle = css`
   align-items: center;
   gap: 1rem;
   padding: 10rem;
+`;
 
-  input {
-    width: 50rem;
-    padding: 1rem;
-    background-color: ${theme.colors.lightgreen2};
-    border: 1px solid ${theme.colors.darkgreen};
-    border-radius: 5px;
-    outline: none;
-    font-size: 1.3rem;
-  }
+export const inputSection = css`
+  width: 50rem;
+  padding: 1rem;
+  background-color: ${theme.colors.lightgreen2};
+  border: 1px solid ${theme.colors.darkgreen};
+  border-radius: 10px;
+  outline: none;
+  font-size: 1.3rem;
 `;
 
 export const messageSection = css`

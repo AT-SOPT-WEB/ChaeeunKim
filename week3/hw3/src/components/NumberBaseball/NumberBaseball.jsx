@@ -45,9 +45,12 @@ const NumberBaseball = () => {
     }
   };
 
+  console.log(answer);
+
   return (
     <div css={S.numballStyle}>
       <input
+        css={S.inputSection}
         type="text"
         value={inputValue}
         onChange={handleChange}
@@ -55,8 +58,9 @@ const NumberBaseball = () => {
         placeholder="3자리 숫자를 입력해주세요."
         maxLength={3}
       />
-      <p>{answer}</p>
+
       <div css={S.messageSection}>{message}</div>
+
       <div css={S.listSection}>
         {history.map((item, idx) => (
           <div key={idx}>{item}</div>
