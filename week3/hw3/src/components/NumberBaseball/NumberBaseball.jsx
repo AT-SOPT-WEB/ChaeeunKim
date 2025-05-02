@@ -2,35 +2,7 @@
 
 import { useEffect, useState } from "react";
 import * as S from "./NumberBaseball.style";
-import { validateInput } from "../../utils/validateInput";
-
-// 무작위 3자리 수 생성
-const generateAnswer = () => {
-  const digits = [];
-  while (digits.length < 3) {
-    const num = Math.floor(Math.random() * 10);
-    if (!digits.includes(num)) {
-      digits.push(num);
-    }
-  }
-  return digits.join("");
-};
-
-// 스트라이크, 볼 계산
-const getResult = (input, answer) => {
-  let strike = 0;
-  let ball = 0;
-
-  for (let i = 0; i < 3; i++) {
-    if (input[i] === answer[i]) {
-      strike++;
-    } else if (answer.includes(input[i])) {
-      ball++;
-    }
-  }
-
-  return { strike, ball };
-};
+import { validateInput, generateAnswer, getResult } from "../../utils/game";
 
 const NumberBaseball = () => {
   const [answer, setAnswer] = useState("");
@@ -61,7 +33,7 @@ const NumberBaseball = () => {
           setAnswer(generateAnswer());
           setInputValue("");
           setMessage("");
-          setHistory("");
+          setHistory([]);
         }, 3000);
       } else {
         const { strike, ball } = getResult(inputValue, answer);
