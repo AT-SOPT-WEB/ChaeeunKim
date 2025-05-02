@@ -42,7 +42,9 @@ const SearchGithub = () => {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onKeyDown={handleSearch}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") handleSearch();
+        }}
         placeholder="Github 프로필을 검색해보세요."
       />
 
