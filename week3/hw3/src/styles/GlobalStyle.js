@@ -1,10 +1,12 @@
 import { css } from "@emotion/react";
 import { reset } from "./reset.css";
 
-export const GlobalStyle = css`
+const GlobalStyle = css`
   ${reset}
 
-  html {
+  html, body {
     font-size: 62.5%;
   }
 `;
+
+export default GlobalStyle;
