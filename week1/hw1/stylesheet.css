@@ -1,11 +1,23 @@
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
   width: 100%;
   padding: 1.3rem;
   background-color: #ccd5ae;
   z-index: 1;
+}
+
+header span {
+  text-align: left;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header i {
+  text-align: right;
 }
 
 .content {
@@ -47,6 +59,7 @@ nav a {
   cursor: pointer;
   border-radius: 0;
   text-decoration: none;
+  color: black
 }
 
 nav a:hover {
@@ -62,18 +75,6 @@ nav a:first-child:hover {
 nav a:last-child:hover {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-}
-
-nav a {
-  text-decoration: none;
-
-  a:link {
-    color: gray;
-  }
-}
-
-nav a:visited{
-  color: black;
 }
 
 main {
@@ -157,7 +158,6 @@ main {
   justify-items: center;
 }
 
-
 .food article,
 .view article,
 .selfie article {
@@ -175,7 +175,7 @@ main {
 .view article:hover,
 .selfie article:hover {
   transform: scale(1.03);
-  background-color: #ccd5ae
+  background-color: #ccd5ae;
 }
 
 .food img,
